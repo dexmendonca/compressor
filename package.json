@@ -1,0 +1,22 @@
+{
+	"name": "compressordesite",
+	"version": "0.0.1",
+	"description": "Compressor de sites estaticos",
+	"homepage": "https://github.com/dexmendonca/compressor#readme",
+	"bugs": {
+		"url": "https://github.com/dexmendonca/compressor/issues"
+	},
+	"license": "MIT",
+	"author": "André \"Dex\" Mendonça",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dexmendonca/compressor.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"devDependencies": {
+		"grunt-contrib-uglify": "^1.0.1"
+	}
+}
