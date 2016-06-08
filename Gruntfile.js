@@ -2,6 +2,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.initConfig({
           concat: {
@@ -24,9 +25,17 @@ module.exports = function(grunt) {
                           src: 'site/res/css/style.css',
                           dest: 'site/res/css/style.min.css'
                   }
+          },
+          copy: {
+                  files: {
+                          cwd: 'site',  // set working folder / root to copy
+                          src: ['*.html','*.php'],      // copy all files and subfolders **with ending .html**
+                          dest: 'site/res',    // destination folder
+                          expand: true           // required when using cwd
+                  }
           }
 
   });
 
-grunt.registerTask('default', ['concat', 'uglify:bundle','cssmin:minify']);
+grunt.registerTask('default', ['concat', 'uglify:bundle','cssmin:minify','copy']);
 };
