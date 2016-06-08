@@ -32,6 +32,12 @@ module.exports = function(grunt) {
                           src: ['*.html','*.php'],      // copy all files and subfolders **with ending .html**
                           dest: 'site/res',    // destination folder
                           expand: true           // required when using cwd
+                  },
+                  files2: {
+                          cwd: 'site/brick',  // set working folder / root to copy
+                          src: ['*.html','*.php'],      // copy all files and subfolders **with ending .html**
+                          dest: 'site/res/brick',    // destination folder
+                          expand: true           // required when using cwd
                   }
           }
 
